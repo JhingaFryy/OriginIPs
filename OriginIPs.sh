@@ -1,14 +1,14 @@
 #!/bin/bash
 
 # Input file containing subdomain resolution results
-INPUT_FILE="result_ip.txt"
+INPUT_FILE="result_ip.txt" #You can change the txt file with your txt file name
 
 # Extract unique IPs from the file
 echo "[*] Extracting unique IPs from $INPUT_FILE..."
 IPs=$(grep -Eo '[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+' "$INPUT_FILE" | sort -u)
 
 # Create output file
-OUTPUT_FILE="origin_ips.txt"
+OUTPUT_FILE="origin_ips.txt" #you can change the OutPut file name here
 > "$OUTPUT_FILE"
 
 echo "[*] Checking potential origin IPs..."
